@@ -1,0 +1,17 @@
+<wm-page data-ng-controller="ContactsPageController" name="page1">
+    <wm-left-panel content="leftnav" name="left_panel1"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-livelist listclass="list-group" itemclass="list-group-item media" template="true" dataset="bind:Variables.Contacts.dataSet" name="livelist1">
+                <wm-listtemplate layout="media" name="listtemplate1">
+                    <wm-container class="media-body" data-template-ctr="true" width="60%" name="container2">
+                        <wm-label width="100%" caption="bind:Variables.Contacts.dataSet[0].displayName" name="Name" class="media-heading h4"></wm-label>
+                        <wm-label width="100%" caption="bind:Variables.Contacts.dataSet.phoneNumbers[0].value" class="text-muted" name="Title"></wm-label>
+                    </wm-container>
+                </wm-listtemplate>
+            </wm-livelist>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar dataset="home,star,music,cog,edit" name="mobile_tabbar1"></wm-mobile-tabbar>
+</wm-page>

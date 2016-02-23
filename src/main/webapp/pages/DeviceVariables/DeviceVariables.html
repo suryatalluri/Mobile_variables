@@ -1,0 +1,62 @@
+<wm-page data-ng-controller="DeviceVariablesPageController" name="page1">
+    <wm-left-panel content="leftnav" name="left_panel1"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-tabs name="tabs1">
+                <wm-tabpane name="tabpane1">
+                    <wm-tabheader name="tabheader1" heading="appinfo"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent1">
+                        <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container1">
+                            <wm-label name="label1" caption="bind:Variables.appInfo.dataSet.appversion"></wm-label>
+                        </wm-container>
+                        <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container2">
+                            <wm-label name="label2" caption="bind:Variables.appInfo.dataSet.cordovaversion"></wm-label>
+                        </wm-container>
+                    </wm-tabcontent>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane2">
+                    <wm-tabheader name="tabheader2" heading="deviceinfo"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent2">
+                        <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container3">
+                            <wm-label name="label3" caption="bind:Variables.deviceInfo.dataSet.connectionType"></wm-label>
+                        </wm-container>
+                        <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container4">
+                            <wm-label name="label4" caption="bind:Variables.deviceInfo.dataSet.deviceModel"></wm-label>
+                        </wm-container>
+                        <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container5">
+                            <wm-label name="label5" caption="bind:Variables.deviceInfo.dataSet.deviceUUID"></wm-label>
+                        </wm-container>
+                        <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container6">
+                            <wm-label name="label6" caption="bind:Variables.deviceInfo.dataSet.os"></wm-label>
+                        </wm-container>
+                        <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container7">
+                            <wm-label name="label7" caption="bind:Variables.deviceInfo.dataSet.osVersion"></wm-label>
+                        </wm-container>
+                    </wm-tabcontent>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane3">
+                    <wm-tabheader name="tabheader3" heading="Location"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent3">
+                        <wm-prefab prefabname="googlemaps" name="googlemaps1" locations="bind:Variables.Location.dataSet" lat="coords.latitude" lng="coords.longitude"></wm-prefab>
+                    </wm-tabcontent>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane4">
+                    <wm-tabheader name="tabheader4" heading="Networkinfo"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent4">
+                        <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container8">
+                            <wm-label name="label8" caption="bind:Variables.Networkinfo.dataSet.connectionType"></wm-label>
+                        </wm-container>
+                        <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container9">
+                            <wm-label name="label9" caption="bind:Variables.Networkinfo.dataSet.isOffline"></wm-label>
+                        </wm-container>
+                        <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container10">
+                            <wm-label name="label10" caption="bind:Variables.Networkinfo.dataSet.isOnline"></wm-label>
+                        </wm-container>
+                    </wm-tabcontent>
+                </wm-tabpane>
+            </wm-tabs>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar dataset="home,star,music,cog,edit" name="mobile_tabbar1"></wm-mobile-tabbar>
+</wm-page>

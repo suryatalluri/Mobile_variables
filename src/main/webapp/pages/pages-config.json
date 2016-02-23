@@ -1,6 +1,24 @@
 [ {
+  "name" : "Barcode",
+  "type" : "PAGE"
+}, {
+  "name" : "Calendar",
+  "type" : "PAGE"
+}, {
+  "name" : "CameraVariable",
+  "type" : "PAGE"
+}, {
   "name" : "Common",
   "type" : "PARTIAL"
+}, {
+  "name" : "Contacts",
+  "type" : "PAGE"
+}, {
+  "name" : "DeviceVariables",
+  "type" : "PAGE"
+}, {
+  "name" : "FileUpload",
+  "type" : "PAGE"
 }, {
   "name" : "Login",
   "type" : "PAGE"

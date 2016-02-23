@@ -1,8 +1,8 @@
-<style id="Main.css">
+<style id="Barcode.css">
 
 </style>
-<script id="Main.js">
-Application.$controller("MainPageController", ["$scope", function ($scope) {
+<script id="Barcode.js">
+Application.$controller("BarcodePageController", ["$scope", function ($scope) {
     "use strict";
 
     /* perform any action with the variables inside this block(on-page-load) */
@@ -24,30 +24,30 @@ Application.$controller("MainPageController", ["$scope", function ($scope) {
 }]);
 
 </script>
-<script id="Main.variables.json">
-var _MainPage_Variables_ ={};
+<script id="Barcode.variables.json">
+var _BarcodePage_Variables_ ={};
 </script>
-<script id="Main.html" type="text/ng-template">
-<wm-page data-ng-controller="MainPageController" name="page1">
+<script id="Barcode.html" type="text/ng-template">
+<wm-page data-ng-controller="BarcodePageController" name="page1">
     <wm-left-panel content="leftnav" name="left_panel1"></wm-left-panel>
     <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
     <wm-content name="content1">
         <wm-page-content columnwidth="12" name="page_content1">
             <wm-segmented-control name="segmented_control1">
-                <wm-segment-content caption="Image" name="segment_content1">
-                    <wm-container name="container1" horizontalalign="center" margintop="10" marginbottom="10">
-                        <wm-camera name="camera1"></wm-camera>
+                <wm-segment-content caption="Widget" name="segment_content1">
+                    <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container1">
+                        <wm-barcodescanner name="barcodescanner1"></wm-barcodescanner>
                     </wm-container>
-                    <wm-container name="container2" horizontalalign="center" margintop="10" marginbottom="10">
-                        <wm-picture name="picture1" width="100px" height="100px" picturesource="bind:Widgets.camera1.datavalue"></wm-picture>
+                    <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container3">
+                        <wm-label name="label1" caption="bind:Widgets.barcodescanner1.datavalue"></wm-label>
                     </wm-container>
                 </wm-segment-content>
-                <wm-segment-content caption="Video" name="segment_content2">
-                    <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container3">
-                        <wm-camera name="camera2" capturetype="VIDEO"></wm-camera>
-                    </wm-container>
+                <wm-segment-content caption="Var" name="segment_content2">
                     <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container4">
-                        <wm-video controls="controls" videopreload="none" name="video1" mp4format="bind:Widgets.camera2.datavalue"></wm-video>
+                        <wm-button class="btn-default" caption="Button" type="button" name="button3" on-tap="scanBarcode"></wm-button>
+                    </wm-container>
+                    <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container5">
+                        <wm-label name="label2" caption="bind:Variables.scanBarcode.dataSet.text"></wm-label>
                     </wm-container>
                 </wm-segment-content>
             </wm-segmented-control>

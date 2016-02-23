@@ -1,4 +1,244 @@
 {
+  "appInfo" : {
+    "_id" : "wm-getAppInfo-wm.DeviceVariable-1444134876543",
+    "name" : "appInfo",
+    "owner" : "App",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ ],
+    "service" : "device",
+    "operation" : "getAppInfo",
+    "dataSet" : {
+      "appversion" : "X.X.X",
+      "cordovaversion" : "X.X.X"
+    },
+    "startUpdate" : true
+  },
+  "Calendar" : {
+    "_id" : "wm-Calendar-wm.DeviceVariable-1456211488803",
+    "name" : "Calendar",
+    "owner" : "App",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ ],
+    "service" : "calendar",
+    "operation" : "getEvents",
+    "dataSet" : [ {
+      "title" : "",
+      "message" : "",
+      "location" : "",
+      "startDate" : "",
+      "endDate" : ""
+    } ],
+    "startUpdate" : true
+  },
+  "CaptureImage" : {
+    "_id" : "wm-CaptureImage-wm.DeviceVariable-1456210827787",
+    "name" : "CaptureImage",
+    "owner" : "App",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ {
+      "target" : "allowImageEdit",
+      "value" : false,
+      "type" : "boolean"
+    }, {
+      "target" : "imageQuality",
+      "value" : 80,
+      "type" : "number"
+    }, {
+      "target" : "imageEncodingType",
+      "value" : "0",
+      "type" : "list"
+    }, {
+      "target" : "correctOrientation",
+      "value" : false,
+      "type" : "boolean"
+    } ],
+    "service" : "camera",
+    "operation" : "captureImage",
+    "dataSet" : {
+      "imagePath" : "resources/images/imagelists/default-image.png"
+    }
+  },
+  "CaptureVideo" : {
+    "_id" : "wm-CaptureVideo-wm.DeviceVariable-1456210848651",
+    "name" : "CaptureVideo",
+    "owner" : "App",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ ],
+    "service" : "camera",
+    "operation" : "captureVideo",
+    "dataSet" : {
+      "videoPath" : ""
+    }
+  },
+  "Contacts" : {
+    "_id" : "wm-deviceVariable1-wm.DeviceVariable-1456211376733",
+    "name" : "Contacts",
+    "owner" : "App",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ ],
+    "service" : "contacts",
+    "operation" : "getContacts",
+    "dataSet" : [ {
+      "id" : "",
+      "displayName" : "",
+      "phoneNumbers" : [ {
+        "value" : ""
+      } ]
+    } ],
+    "startUpdate" : true
+  },
+  "deviceInfo" : {
+    "_id" : "wm-deviceInfo-getDeviceInfo-wm.DeviceVariable-1444134852623",
+    "name" : "deviceInfo",
+    "owner" : "App",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ ],
+    "service" : "device",
+    "operation" : "getDeviceInfo",
+    "dataSet" : {
+      "connectionType" : "NONE",
+      "deviceModel" : "DEVICEMODEL",
+      "os" : "DEVICEOS",
+      "osVersion" : "X.X.X",
+      "deviceUUID" : "DEVICEUUID"
+    },
+    "startUpdate" : true
+  },
+  "FileServiceListFiles" : {
+    "_id" : "wm-FileServiceListFiles-wm.ServiceVariable-1456211679278",
+    "name" : "FileServiceListFiles",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.mobile_variables.fileservice.FileService.WMFile",
+    "service" : "FileService",
+    "operation" : "listFiles",
+    "operationType" : "post",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/file/files",
+      "httpMethod" : "post",
+      "name" : "listFiles",
+      "parameters" : [ {
+        "name" : "relativePath",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "File"
+  },
+  "FileServiceUploadFile" : {
+    "_id" : "wm-FileServiceUploadFile-wm.ServiceVariable-1456211661838",
+    "name" : "FileServiceUploadFile",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.mobile_variables.fileservice.FileService.FileUploadResponse",
+    "service" : "FileService",
+    "operation" : "uploadFile",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/file/uploadFile",
+      "httpMethod" : "post",
+      "name" : "uploadFile",
+      "consumes" : [ "multipart/form-data" ],
+      "parameters" : [ {
+        "name" : "files",
+        "parameterType" : "formData",
+        "type" : "file"
+      }, {
+        "name" : "relativePath",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "goToPage_Barcode" : {
+    "_id" : "wm-goToPage_Barcode-wm.NavigationVariable-1456210918299",
+    "name" : "goToPage_Barcode",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Barcode",
+    "pageTransitions" : "none"
+  },
+  "goToPage_Calendar" : {
+    "_id" : "wm-goToPage_Calendar-wm.NavigationVariable-1456211456995",
+    "name" : "goToPage_Calendar",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Calendar",
+    "pageTransitions" : "none"
+  },
+  "goToPage_CameraVariable" : {
+    "_id" : "wm-goToPage_CameraVariable-wm.NavigationVariable-1456210706694",
+    "name" : "goToPage_CameraVariable",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "CameraVariable",
+    "pageTransitions" : "none"
+  },
+  "goToPage_Contacts" : {
+    "_id" : "wm-goToPage_Contacts-wm.NavigationVariable-1456211345235",
+    "name" : "goToPage_Contacts",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Contacts",
+    "pageTransitions" : "none"
+  },
+  "goToPage_DeviceVariables" : {
+    "_id" : "wm-goToPage_DeviceVariables-wm.NavigationVariable-1456211055362",
+    "name" : "goToPage_DeviceVariables",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "DeviceVariables",
+    "pageTransitions" : "none"
+  },
+  "goToPage_FileUpload" : {
+    "_id" : "wm-goToPage_FileUpload-wm.NavigationVariable-1456211626092",
+    "name" : "goToPage_FileUpload",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "FileUpload",
+    "pageTransitions" : "none"
+  },
   "goToPage_Main" : {
     "_id" : "wm-wm.NavigationVariable1389180517517",
     "name" : "goToPage_Main",
@@ -6,6 +246,74 @@
     "category" : "wm.NavigationVariable",
     "operation" : "gotoPage",
     "pageName" : "Main"
+  },
+  "Location" : {
+    "_id" : "wm-Location-wm.DeviceVariable-1456211256717",
+    "name" : "Location",
+    "owner" : "App",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ {
+      "target" : "geolocationHighAccuracy",
+      "value" : true,
+      "type" : "boolean"
+    }, {
+      "target" : "geolocationMaximumAge",
+      "value" : 3,
+      "type" : "number"
+    }, {
+      "target" : "geolocationTimeout",
+      "value" : 5,
+      "type" : "number"
+    } ],
+    "service" : "device",
+    "operation" : "getCurrentGeoPosition",
+    "dataSet" : {
+      "coords" : {
+        "latitude" : 0,
+        "longitude" : 0,
+        "altitude" : 0,
+        "accuracy" : 0,
+        "altitudeAccuracy" : 0,
+        "heading" : 0,
+        "speed" : 0
+      },
+      "timestamp" : 0
+    },
+    "startUpdate" : true
+  },
+  "Networkinfo" : {
+    "_id" : "wm-Networkinfo-wm.DeviceVariable-1456211217740",
+    "name" : "Networkinfo",
+    "owner" : "App",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ {
+      "target" : "networkStatus",
+      "value" : "bind:$root.networkStatus",
+      "type" : "boolean"
+    } ],
+    "service" : "device",
+    "operation" : "getNetworkInfo",
+    "dataSet" : {
+      "connectionType" : "NONE",
+      "isOnline" : true,
+      "isOffline" : false
+    },
+    "startUpdate" : true,
+    "autoUpdate" : true
+  },
+  "scanBarcode" : {
+    "_id" : "wm-scanBarcode-wm.DeviceVariable-1456211003895",
+    "name" : "scanBarcode",
+    "owner" : "App",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ ],
+    "service" : "scan",
+    "operation" : "scanBarCode",
+    "dataSet" : {
+      "text" : "BAR CODE",
+      "format" : "TEXT",
+      "cancelled" : false
+    }
   },
   "supportedLocale" : {
     "_id" : "wm-wm.Variable1402640443182",
@@ -18,36 +326,5 @@
     "type" : "string",
     "isList" : false,
     "saveInPhonegap" : false
-  },
-  "deviceInfo": {
-    "owner": "App",
-    "dataSet": {
-      "connectionType": "NONE",
-      "deviceModel": "DEVICEMODEL",
-      "os": "DEVICEOS",
-      "osVersion": "X.X.X",
-      "deviceUUID": "DEVICEUUID"
-    },
-    "dataBinding": [],
-    "service": "device",
-    "operation": "getDeviceInfo",
-    "startUpdate": true,
-    "category": "wm.DeviceVariable",
-    "_id": "wm-deviceInfo-getDeviceInfo-wm.DeviceVariable-1444134852623",
-    "name": "deviceInfo"
-  },
-  "appInfo": {
-    "owner": "App",
-    "dataSet": {
-      "appversion": "X.X.X",
-      "cordovaversion": "X.X.X"
-    },
-    "dataBinding": [],
-    "service": "device",
-    "operation": "getAppInfo",
-    "startUpdate": true,
-    "category": "wm.DeviceVariable",
-    "_id": "wm-getAppInfo-wm.DeviceVariable-1444134876543",
-    "name": "appInfo"
   }
 }

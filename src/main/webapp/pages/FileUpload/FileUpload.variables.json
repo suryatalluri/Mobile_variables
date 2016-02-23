@@ -1,0 +1,36 @@
+{
+  "fileUpload" : {
+    "_id" : "wm-fileUpload-wm.DeviceVariable-1456211732123",
+    "name" : "fileUpload",
+    "owner" : "Page",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ {
+      "target" : "localFile",
+      "value" : "bind:Widgets.camera1.datavalue",
+      "type" : "string"
+    } ],
+    "service" : "file",
+    "operation" : "upload",
+    "dataSet" : {
+      "name" : "",
+      "path" : "",
+      "size" : 0,
+      "type" : ""
+    },
+    "onSuccess" : "fileUploadonSuccess($event, $scope)",
+    "onError" : "fileUploadonError($event, $scope)"
+  },
+  "uploadIndicator" : {
+    "_id" : "wm-uploadIndicator-wm.Variable-1456211866385",
+    "name" : "uploadIndicator",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : "-2"
+    },
+    "type" : "number",
+    "isList" : false,
+    "saveInPhonegap" : false
+  }
+}

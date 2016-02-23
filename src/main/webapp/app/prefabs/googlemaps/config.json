@@ -1,0 +1,86 @@
+{
+  "group": "location",
+  "templateUrl": "/pages/Main/Main.html",
+  "controllerUrl": "/pages/Main/Main.js",
+  "variablesUrl": "/pages/Main/Main.variables.json",
+  "iconUrl": "/resources/images/imagelists/prefab-icon.png",
+  "resources": {
+    "styles": [
+      "/pages/Main/Main.css"
+    ],
+    "scripts": [
+      "https://maps.google.com/maps/api/js?sensor=false"
+    ],
+    "modules": [
+      {
+        "name": "ngMap",
+        "files": [
+          "/resources/js/ng-map.min.js"
+        ]
+      }
+    ]
+  },
+  "properties": {
+    "locations": {
+      "bindable": "in-bound",
+      "type": "array,object",
+      "widget": "string"
+    },
+    "lat": {
+      "type": "list"
+    },
+    "lng": {
+      "type": "list"
+    },
+    "icon": {
+      "type": "list"
+    },
+    "info": {
+      "type": "list"
+    },
+    "shade": {
+      "type": "list"
+    },
+    "radius": {
+      "type": "list"
+    },
+    "origin": {
+      "bindable": "in-out-bound",
+      "type": "string"
+    },
+    "destination": {
+      "bindable": "in-out-bound",
+      "type": "string"
+    },
+    "height": {
+      "type": "string",
+      "value": "400px"
+    },
+    "zoom": {
+      "type": "number",
+      "value": 5
+    },
+    "perimeter": {
+      "type": "boolean",
+      "value": true
+    },
+    "trafficlayer": {
+      "type": "boolean",
+      "value": false
+    },
+    "refresh": {
+      "type": "method",
+      "method": "refresh"
+    },
+    "distance": {
+      "type": "string",
+      "bindable": "out-bound",
+      "show": false
+    },
+    "duration": {
+      "type": "string",
+      "bindable": "out-bound",
+      "show": false
+    }
+  }
+}

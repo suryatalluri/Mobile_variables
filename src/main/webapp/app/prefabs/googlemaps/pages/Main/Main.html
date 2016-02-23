@@ -1,0 +1,27 @@
+<wm-page name="googlemap" data-ng-controller="GooglemapsController">
+    <wm-view name="googlemapview" style="height:{{height}};" class="container" backgroundcolor="#fff">
+        <ng-map id="map" default-style="false" style="height:100%; width:100%" center="{{center}}" zoom="{{zoom}}" draggable="true">
+            <div ng-repeat="marker in markersData">
+                <marker position="{{marker.latlng}}" on-click="map.showInfoWindow(marker.id)" icon="{{marker.iconData}}">
+                </marker>
+                <info-window id="{{marker.id}}" ng-cloak ><div><p>{{marker.information}}</p></div></info-window>
+            </div>
+            <shape data-ng-if="perimeter" name="circle" ng-repeat="shape in markersData" no-watcher="true"
+                   stroke-color="{{shape.color}}"
+                   stroke-opacity="0.5"
+                   stroke-weight="2"
+                   fill-color="{{shape.color}}"
+                   fill-opacity="0.35"
+                   center="{{shape.latlng}}"
+                   radius="{{shape.radius}}">
+            </shape>
+            <directions
+                    draggable="true"
+                    travel-mode="DRIVING"
+                    origin="{{directionsData.origin}}"
+                    destination="{{directionsData.destination}}" provideRouteAlternatives="true" hideRouteList="false">
+            </directions>
+            <traffic-layer data-ng-if="trafficlayer"></traffic-layer>
+        </ng-map>
+    </wm-view>
+</wm-page>

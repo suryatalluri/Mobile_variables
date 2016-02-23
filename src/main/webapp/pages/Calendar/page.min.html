@@ -1,0 +1,51 @@
+<style id="Calendar.css">
+
+</style>
+<script id="Calendar.js">
+Application.$controller("CalendarPageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action with the variables inside this block(on-page-load) */
+    $scope.onPageVariablesReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. $scope.Variables.staticVariable1.getData()
+         */
+    };
+    
+    /* perform any action with widgets inside this block */
+    $scope.onPageReady = function () {
+        /*
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+         */
+    };
+
+}]);
+
+</script>
+<script id="Calendar.variables.json">
+var _CalendarPage_Variables_ ={};
+</script>
+<script id="Calendar.html" type="text/ng-template">
+<wm-page data-ng-controller="CalendarPageController" name="page1">
+    <wm-left-panel content="leftnav" name="left_panel1"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-livelist listclass="list-group" itemclass="list-group-item media" template="true" dataset="bind:Variables.Calendar.dataSet" name="livelist1">
+                <wm-listtemplate layout="media" name="listtemplate1">
+                    <wm-container class="media-body" data-template-ctr="true" width="60%" name="container2">
+                        <wm-label width="100%" caption="bind:Variables.Calendar.dataSet[0].title" name="Name" class="media-heading h4"></wm-label>
+                        <wm-label width="100%" caption="bind:Variables.Calendar.dataSet[0].message" class="text-muted" name="Title"></wm-label>
+                        <wm-label name="label3" caption="bind:Variables.Calendar.dataSet[0].startDate"></wm-label>
+                        <wm-label name="label5" caption="bind:Variables.Calendar.dataSet[0].endDate"></wm-label>
+                        <wm-label name="label6" caption="bind:Variables.Calendar.dataSet[0].location"></wm-label>
+                    </wm-container>
+                </wm-listtemplate>
+            </wm-livelist>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar dataset="home,star,music,cog,edit" name="mobile_tabbar1"></wm-mobile-tabbar>
+</wm-page>
+</script>

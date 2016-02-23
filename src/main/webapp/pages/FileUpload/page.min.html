@@ -1,0 +1,123 @@
+<style id="FileUpload.css">
+
+</style>
+<script id="FileUpload.js">
+Application.$controller("FileUploadPageController", ["$scope", function($scope) {
+    "use strict";
+
+    /* perform any action with the variables inside this block(on-page-load) */
+    $scope.onPageVariablesReady = function() {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. $scope.Variables.staticVariable1.getData()
+         */
+    };
+
+    /* perform any action with widgets inside this block */
+    $scope.onPageReady = function() {
+        /*
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+         */
+    };
+
+
+    $scope.camera1Success = function($event, $isolateScope) {
+        $scope.Variables.uploadIndicator.dataSet.dataValue = 0;
+    };
+
+
+    $scope.fileUploadonSuccess = function(variable, data) {
+        $scope.Variables.uploadIndicator.dataSet.dataValue = 1;
+    };
+
+    $scope.fileUploadonError = function(variable, data) {
+        $scope.Variables.uploadIndicator.dataSet.dataValue = -1;
+    };
+
+}]);
+</script>
+<script id="FileUpload.variables.json">
+var _FileUploadPage_Variables_ ={
+  "fileUpload" : {
+    "_id" : "wm-fileUpload-wm.DeviceVariable-1456211732123",
+    "name" : "fileUpload",
+    "owner" : "Page",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ {
+      "target" : "localFile",
+      "value" : "bind:Widgets.camera1.datavalue",
+      "type" : "string"
+    } ],
+    "service" : "file",
+    "operation" : "upload",
+    "dataSet" : {
+      "name" : "",
+      "path" : "",
+      "size" : 0,
+      "type" : ""
+    },
+    "onSuccess" : "fileUploadonSuccess($event, $scope)",
+    "onError" : "fileUploadonError($event, $scope)"
+  },
+  "uploadIndicator" : {
+    "_id" : "wm-uploadIndicator-wm.Variable-1456211866385",
+    "name" : "uploadIndicator",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : "-2"
+    },
+    "type" : "number",
+    "isList" : false,
+    "saveInPhonegap" : false
+  }
+}
+</script>
+<script id="FileUpload.html" type="text/ng-template">
+<wm-page data-ng-controller="FileUploadPageController" name="page1">
+    <wm-left-panel content="leftnav" name="left_panel1"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-segmented-control name="segmented_control1">
+                <wm-segment-content caption="Widget" name="segment_content1">
+                    <wm-fileupload name="fileupload1" service="FileService" operation="listFiles"></wm-fileupload>
+                    <wm-button class="btn-default" caption="Button" type="button" name="button1" on-tap="FileServiceListFiles"></wm-button>
+                    <wm-livelist listclass="list-group" itemclass="list-group-item media" template="true" dataset="bind:Variables.FileServiceListFiles.dataSet" name="livelist1">
+                        <wm-listtemplate layout="media" name="listtemplate1">
+                            <wm-container class="media-left" width="20%" name="container1">
+                                <wm-picture class="media-object picture" width="40pt" name="Picture" picturesource="bind:Variables.FileServiceListFiles.dataSet.path" title="bind:Variables.FileServiceListFiles.dataSet.name"></wm-picture>
+                            </wm-container>
+                            <wm-container class="media-body" data-template-ctr="true" width="60%" name="container2">
+                                <wm-label width="100%" caption="bind:Variables.FileServiceListFiles.dataSet.name" name="Name" class="media-heading h4"></wm-label>
+                                <wm-label width="100%" caption="bind:Variables.FileServiceListFiles.dataSet.type" class="text-muted" name="Title"></wm-label>
+                            </wm-container>
+                            <wm-container class="media-right media-middle" width="20%" name="container3">
+                                <wm-anchor caption="" class="edit-list-item" iconclass="fa fa-pencil fa-2x" show="false" name="anchor1"></wm-anchor>
+                                <wm-anchor caption="" class="delete-list-item" iconclass="fa fa-trash-o fa-2x" show="false" paddingleft="5" name="anchor2"></wm-anchor>
+                            </wm-container>
+                        </wm-listtemplate>
+                    </wm-livelist>
+                </wm-segment-content>
+                <wm-segment-content caption="Variable" name="segment_content2">
+                    <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container4">
+                        <wm-camera name="camera1" on-success="camera1Success($event, $scope);fileUpload"></wm-camera>
+                    </wm-container>
+                    <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container5" backgroundcolor="skyblue" show="bind:Variables.uploadIndicator.dataSet.dataValue === 0">
+                        <wm-label name="label4" color="white" caption="Uploading"></wm-label>
+                    </wm-container>
+                    <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container6" backgroundcolor="green" show="bind:Variables.uploadIndicator.dataSet.dataValue === 1">
+                        <wm-label name="label5" color="white" caption="successfull"></wm-label>
+                    </wm-container>
+                    <wm-container horizontalalign="center" margintop="10" marginbottom="10" name="container7" backgroundcolor="red" show="bind:Variables.uploadIndicator.dataSet.dataValue === -1">
+                        <wm-label name="label6" color="white" caption="failed"></wm-label>
+                    </wm-container>
+                </wm-segment-content>
+            </wm-segmented-control>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar dataset="home,star,music,cog,edit" name="mobile_tabbar1"></wm-mobile-tabbar>
+</wm-page>
+</script>
