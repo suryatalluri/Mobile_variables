@@ -5,18 +5,18 @@
         <wm-page-content columnwidth="12" name="page_content1">
             <wm-segmented-control name="segmented_control1">
                 <wm-segment-content caption="Widget" name="segment_content1">
-                    <wm-fileupload name="fileupload1" service="FileService" operation="listFiles"></wm-fileupload>
+                    <wm-fileupload name="fileupload1" service="FileService" operation="uploadFile"></wm-fileupload>
                     <wm-button class="btn-default" caption="Button" type="button" name="button1" on-tap="FileServiceListFiles"></wm-button>
                     <wm-livelist listclass="list-group" itemclass="list-group-item media" template="true" dataset="bind:Variables.FileServiceListFiles.dataSet" name="livelist1">
                         <wm-listtemplate layout="media" name="listtemplate1">
-                            <wm-container class="media-left" width="20%" name="container1">
-                                <wm-picture class="media-object picture" width="40pt" name="Picture" picturesource="bind:Variables.FileServiceListFiles.dataSet.path" title="bind:Variables.FileServiceListFiles.dataSet.name"></wm-picture>
+                            <wm-container class="media-left" width="20%" name="container5_1">
+                                <wm-picture class="media-object picture" width="40pt" name="Picture" picturesource="bind:Variables.FileServiceListFiles.dataSet.path"></wm-picture>
                             </wm-container>
-                            <wm-container class="media-body" data-template-ctr="true" width="60%" name="container2">
+                            <wm-container class="media-body" data-template-ctr="true" width="60%" name="container6_1">
                                 <wm-label width="100%" caption="bind:Variables.FileServiceListFiles.dataSet.name" name="Name" class="media-heading h4"></wm-label>
                                 <wm-label width="100%" caption="bind:Variables.FileServiceListFiles.dataSet.type" class="text-muted" name="Title"></wm-label>
                             </wm-container>
-                            <wm-container class="media-right media-middle" width="20%" name="container3">
+                            <wm-container class="media-right media-middle" width="20%" name="container7_1">
                                 <wm-anchor caption="" class="edit-list-item" iconclass="fa fa-pencil fa-2x" show="false" name="anchor1"></wm-anchor>
                                 <wm-anchor caption="" class="delete-list-item" iconclass="fa fa-trash-o fa-2x" show="false" paddingleft="5" name="anchor2"></wm-anchor>
                             </wm-container>

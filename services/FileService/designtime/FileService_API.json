@@ -14,7 +14,7 @@
     "x-WM-CONTROLLER_NAME" : "File",
     "x-WM-VERSION" : ""
   } ],
-  "schemes" : [ "https", "http" ],
+  "schemes" : [ "http", "https" ],
   "paths" : {
     "/file/downloadFile" : {
       "get" : {
@@ -27,7 +27,7 @@
           "required" : false,
           "type" : "string",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "d9d15e83-b77a-47a0-aa1f-7254a05846d4",
+          "x-WM-UUID" : "c89288cf-c29d-4d28-8820-9737337b3bc3",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "returnName",
@@ -35,7 +35,7 @@
           "required" : false,
           "type" : "string",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "d767b1a6-5e80-4b1d-af91-74bd9d60aff6",
+          "x-WM-UUID" : "45113b76-9df2-4703-95d3-9da62331ba03",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -47,7 +47,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "129e97e0-c8b3-4a63-918f-1cde836c89a1",
+        "x-WM-OPERATION_UID" : "3f031b19-9767-4a79-9942-337ad08ba7b1",
         "x-WM-METHOD_NAME" : "getDownloadFile",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -67,7 +67,7 @@
           "required" : false,
           "type" : "string",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "e567f266-0da3-4b09-b559-2fd88dbd8dff",
+          "x-WM-UUID" : "a018e497-6e59-453a-8e7e-59037c0a1c50",
           "x-WM-EDITABLE" : true
         }, {
           "name" : "returnName",
@@ -75,7 +75,7 @@
           "required" : false,
           "type" : "string",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "8bf87a85-e15b-40a5-beb0-0cdc4e5b7743",
+          "x-WM-UUID" : "cae76d5b-b90e-409d-9db3-02d90c469ab3",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -87,7 +87,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "f6836068-6c09-4b24-93c4-f40b92228bf1",
+        "x-WM-OPERATION_UID" : "222c6412-d7d4-4087-9bad-07ba42333f77",
         "x-WM-METHOD_NAME" : "getDownloadFileAsInline",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -106,7 +106,7 @@
           "required" : false,
           "type" : "string",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "f19cc93e-1003-433d-8284-caea4249dd81",
+          "x-WM-UUID" : "481268b3-849b-4daf-b35e-6819f7a2d8a7",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -117,7 +117,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "42bc1494-57f6-4460-9650-8a39dc39e124",
+        "x-WM-OPERATION_UID" : "3e6c1441-e032-42b8-a5ab-71bc10a6c29e",
         "x-WM-METHOD_NAME" : "deleteFile",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -136,7 +136,7 @@
           "required" : false,
           "type" : "string",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "5e727773-f8cd-459e-93ef-83f87eb5a0af",
+          "x-WM-UUID" : "26294af3-b22b-4a44-b362-64fa99b41a82",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -152,7 +152,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "85f90f06-7183-4b64-9ea2-c7e22e282783",
+        "x-WM-OPERATION_UID" : "8a1e476a-9c14-483b-bb4d-39f1ae269fb2",
         "x-WM-METHOD_NAME" : "listFiles",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },
@@ -176,7 +176,7 @@
           },
           "collectionFormat" : "multi",
           "x-WM-FULLY_QUALIFIED_TYPE" : "org.springframework.web.multipart.MultipartFile",
-          "x-WM-UUID" : "4016c9a2-35b7-4cd6-8dd0-8f291e2cea93",
+          "x-WM-UUID" : "45179b6f-472e-49a3-9fec-9c0cf8d8ebc3",
           "x-WM-EDITABLE" : true,
           "x-WM-RESOLVER" : "[Lorg.springframework.web.multipart.MultipartFile;"
         }, {
@@ -185,7 +185,7 @@
           "required" : false,
           "type" : "string",
           "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
-          "x-WM-UUID" : "186726ba-c2b5-4900-8c63-c809f00fd917",
+          "x-WM-UUID" : "00b1f319-ea92-4e00-a420-24516ec99948",
           "x-WM-EDITABLE" : true
         } ],
         "responses" : {
@@ -201,7 +201,7 @@
             }
           }
         },
-        "x-WM-OPERATION_UID" : "fc42cdcc-7af8-49fb-8358-8e12b36dd95f",
+        "x-WM-OPERATION_UID" : "58b7d09f-904f-482a-91ea-cd47bf76b937",
         "x-WM-METHOD_NAME" : "uploadFile",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
       },

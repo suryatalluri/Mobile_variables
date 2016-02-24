@@ -104,8 +104,120 @@
     },
     "startUpdate" : true
   },
+  "FileServiceDeleteFile" : {
+    "_id" : "wm-FileServiceDeleteFile-wm.ServiceVariable-1456295942365",
+    "name" : "FileServiceDeleteFile",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "boolean",
+    "service" : "FileService",
+    "operation" : "deleteFile",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/file/file",
+      "httpMethod" : "delete",
+      "name" : "deleteFile",
+      "parameters" : [ {
+        "name" : "file",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "FileServiceGetDownloadFile" : {
+    "_id" : "wm-FileServiceGetDownloadFile-wm.ServiceVariable-1456295942363",
+    "name" : "FileServiceGetDownloadFile",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.wavemaker.runtime.file.model.DownloadResponse",
+    "service" : "FileService",
+    "operation" : "getDownloadFile",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/file/downloadFile",
+      "httpMethod" : "get",
+      "name" : "getDownloadFile",
+      "produces" : [ "application/octet-stream" ],
+      "parameters" : [ {
+        "name" : "file",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "returnName",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "FileServiceGetDownloadFileAsInline" : {
+    "_id" : "wm-FileServiceGetDownloadFileAsInline-wm.ServiceVariable-1456295942364",
+    "name" : "FileServiceGetDownloadFileAsInline",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.wavemaker.runtime.file.model.DownloadResponse",
+    "service" : "FileService",
+    "operation" : "getDownloadFileAsInline",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/file/downloadFileAsInline",
+      "httpMethod" : "get",
+      "name" : "getDownloadFileAsInline",
+      "produces" : [ "application/octet-stream" ],
+      "parameters" : [ {
+        "name" : "file",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "returnName",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
   "FileServiceListFiles" : {
-    "_id" : "wm-FileServiceListFiles-wm.ServiceVariable-1456211679278",
+    "_id" : "wm-FileServiceListFiles-wm.ServiceVariable-1456295942365",
     "name" : "FileServiceListFiles",
     "owner" : "App",
     "category" : "wm.ServiceVariable",
@@ -113,7 +225,6 @@
     "type" : "com.mobile_variables.fileservice.FileService.WMFile",
     "service" : "FileService",
     "operation" : "listFiles",
-    "operationType" : "post",
     "serviceType" : "JavaService",
     "wmServiceOperationInfo" : {
       "relativePath" : "/file/files",
@@ -132,16 +243,15 @@
     "firstRow" : 0,
     "maxResults" : 20,
     "designMaxResults" : 10,
-    "startUpdate" : true,
+    "startUpdate" : false,
     "autoUpdate" : true,
     "inFlightBehavior" : "executeLast",
     "transformationRequired" : false,
     "saveInPhonegap" : false,
-    "isDefault" : true,
-    "controller" : "File"
+    "isDefault" : true
   },
   "FileServiceUploadFile" : {
-    "_id" : "wm-FileServiceUploadFile-wm.ServiceVariable-1456211661838",
+    "_id" : "wm-FileServiceUploadFile-wm.ServiceVariable-1456295932590",
     "name" : "FileServiceUploadFile",
     "owner" : "App",
     "category" : "wm.ServiceVariable",
